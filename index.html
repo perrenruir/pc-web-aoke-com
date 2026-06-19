@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aoke · 知识库入口</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f8f6f1;
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            color: #2c2b28;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 4rem;
+        }
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        header {
+            border-bottom: 1px solid #d9d2c5;
+            padding-bottom: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+        .site-title {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #3e3b35;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .site-title small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #7d7a72;
+            letter-spacing: 0.5px;
+        }
+        .subhead {
+            font-size: 1rem;
+            color: #6b675f;
+            margin-top: 0.4rem;
+            font-style: italic;
+        }
+        .intro-block {
+            background: #fffcf8;
+            padding: 2rem 2.2rem;
+            border-left: 5px solid #b7aa98;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .intro-block p {
+            margin-bottom: 1.2rem;
+        }
+        .intro-block p:last-child {
+            margin-bottom: 0;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #3e3b35;
+            margin: 2rem 0 1rem;
+            border-bottom: 1px dashed #cbc4b8;
+            padding-bottom: 0.3rem;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.5rem;
+            margin: 1.8rem 0 2.5rem;
+        }
+        .card {
+            background: #fffcf8;
+            padding: 1.4rem 1.2rem 1.2rem;
+            border: 1px solid #ddd8cf;
+            border-radius: 0;
+            transition: box-shadow 0.15s ease;
+        }
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #4e4940;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.3px;
+        }
+        .card p {
+            font-size: 0.92rem;
+            color: #5b5750;
+        }
+        .quote-box {
+            background: #f0ece6;
+            border-left: 4px solid #9c8f7e;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+            font-style: normal;
+            color: #3f3c36;
+        }
+        .quote-box strong {
+            color: #2c2b28;
+        }
+        .info-note {
+            background: #fcf9f4;
+            border: 1px solid #d6cfc2;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+            font-size: 0.95rem;
+        }
+        .info-note::before {
+            content: "✱";
+            font-size: 1.3rem;
+            color: #7d7263;
+            line-height: 1.4;
+        }
+        .link-inline a {
+            color: #5b5b4f;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: #b7aa98;
+            font-weight: 500;
+        }
+        .link-inline a:hover {
+            color: #2f2d28;
+            text-decoration-color: #2f2d28;
+        }
+        .faq-summary {
+            margin: 2.2rem 0 1rem;
+        }
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e2dcd2;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #3e3b35;
+        }
+        .faq-a {
+            margin-top: 0.2rem;
+            color: #5b5750;
+            font-size: 0.95rem;
+        }
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #d9d2c5;
+            font-size: 0.85rem;
+            color: #7d7a72;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        @media (max-width: 480px) {
+            body { padding: 1.2rem 0.8rem 3rem; }
+            .intro-block { padding: 1.2rem 1.2rem; }
+            .site-title { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <header>
+        <div class="site-title">
+            <span>aoke</span>
+            <small>知识库 · 持续关注者的目录</small>
+        </div>
+        <div class="subhead">再次访问与收藏的起点</div>
+    </header>
+
+    <!-- 介绍区：从再次访问切入 -->
+    <div class="intro-block">
+        <p>知识工作者的书签总会不断增加，但真正值得反复打开的站点并不多。<strong>aoke</strong> 正是其中之一。它并不是一个一次性的信息页面，而是一个以目录感组织的知识库入口——每一次回访，都可能在结构化内容之外发现新的关联线索。</p>
+        <p>许多用户将 <span class="link-inline"><a href="https://pc-web-aoke.com">aoke</a></span> 加入收藏夹，并非因为某个单一功能，而是因为它提供了一种可积累的阅读节奏。文档、说明、提示与背景信息以清晰的层次铺开，方便回查，也适合持续跟进。</p>
+    </div>
+
+    <!-- 说明区：目录感的布局 -->
+    <div class="section-title">目录感的组织方式</div>
+    <div class="card-grid">
+        <div class="card">
+            <h3>模块化说明</h3>
+            <p>每个主题区域独立成块，从背景到用法逐层展开。适合按需跳读，也适合顺序通读。</p>
+        </div>
+        <div class="card">
+            <h3>引用与提示框</h3>
+            <p>关键前提、常见误解、操作注意事项用引用或提示框标出，减少信息遗漏。</p>
+        </div>
+        <div class="card">
+            <h3>相关条目链接</h3>
+            <p>同一知识体系内的相关话题互相引用，帮助读者建立网状理解，而非线性列表。</p>
+        </div>
+        <div class="card">
+            <h3>收藏友好结构</h3>
+            <p>页面不依赖动态加载，所有内容稳定可访问，利于长期保存与离线引用。</p>
+        </div>
+    </div>
+
+    <!-- 提示区 -->
+    <div class="section-title">再次访问时的提示</div>
+    <div class="quote-box">
+        <strong>持续关注者的习惯</strong> — 每隔一段时间重新打开知识库，往往会注意到之前忽略的注释或关联。建议在首次阅读后做简单标记，下次回访时对照。<br>
+        <span style="display:inline-block; margin-top:0.6rem; font-size:0.9rem; color:#5f5b53;">例如：关注说明区末尾的「版本备注」与提示框中的「常见调整」。</span>
+    </div>
+
+    <!-- 相关信息区 -->
+    <div class="section-title">相关信息</div>
+    <p style="margin-bottom:1rem; color:#5b5750;">以下内容摘取自知识库中频繁被引用的部分，可作为再次阅读的索引线索。</p>
+    <div class="info-note">
+        <span>如果这是你第二次或第三次打开 <span class="link-inline"><a href="https://pc-web-aoke.com">aoke</a></span>，可以优先浏览「使用场景」与「操作前提」两个章节。它们通常包含更新注释。</span>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+        <div class="faq-item">
+            <div class="faq-q">· 收藏后内容会变化吗？</div>
+            <div class="faq-a">知识库的主体框架保持稳定，但说明区与提示区会随积累补充新的注释与关联。建议每季度回访一次。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">· 为什么推荐持续关注？</div>
+            <div class="faq-a">部分内容以「层级递进」的方式组织，初次阅读时可能只用到表层说明；后续使用中再回看，更容易理解深层注释与边界情况。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">· 如何快速定位上次看到的位置？</div>
+            <div class="faq-a">建议使用浏览器书签配合页面内标题锚点，或直接利用「目录感布局」中的卡片区域作为记忆坐标。</div>
+        </div>
+    </div>
+
+    <!-- 结尾 -->
+    <div class="footer-note">
+        <span>知识库入口 · 目录持续整理</span>
+        <span><span class="link-inline"><a href="https://pc-web-aoke.com">aoke</a></span></span>
+    </div>
+
+</div>
+</body>
+</html>
